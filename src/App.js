@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Classprops from "./Classprops";
+import Functionalprops from "./Functionalprops";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+class App extends React.Component{
+  render(){
+    return (
+      <div>
+      <Classprops name="Learner 1" place="New York"><p>Child Component</p></Classprops>
+      <Classprops name="Learner 2" place="Nairobi"><button>Click</button></Classprops>
+      <Classprops name="Learner 3" place="Carlifonia"/>
+      <Functionalprops name="Learner 4" place="A"/>
     </div>
-  );
-}
-
+    );
+    }  
+  }
 export default App;
